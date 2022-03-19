@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from users.models import Owner, Pet
 
-# Create your views here.
+def homepage(request):
+    context = {
+        'listOfPets' : Pet.objects.all()
+    }
+    return render(request, 'dashboard/index.html', context)
