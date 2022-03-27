@@ -1,0 +1,19 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} {{ petDetail.name }} {% endblock title %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+      {{ petDetail.name }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ petDetail.kind }}</h5>
+      <p class="card-text">{{ petDetail.description }}</p>
+      <a href="#" class="btn btn-primary">{{ petDetail.gender }}</a>
+    </div>
+    <div class="card-footer text-muted">
+      {{ petDetail.owner }}
+    </div>
+  </div>
+{% endblock content %}
